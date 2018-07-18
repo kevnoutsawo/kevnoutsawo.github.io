@@ -60,8 +60,8 @@
 			  </button>
 			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 			    <li><a type="button" data-toggle="modal" data-target="#addPage">Add Page</a></li>
-			    <li><a href="#">Add Post</a></li>
-			    <li><a href="#">Add User</a></li>
+			    <li><a type="button" data-toggle="modal" data-target="#addPost">Add Post</a></li>
+			    <li><a type="button" data-toggle="modal" data-target="#addUser">Add User</a></li>
 			  </ul>
 			</div>
     			
@@ -216,8 +216,74 @@
   </div>
 </div>
 
+ <!-- Add User -->
+    <div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Add User</h4>
+            </div>
+            <div class="modal-body">
+            <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" placeholder="Username">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Email">
+            <label>Choose password</label>
+            <input type="password" class="form-control" placeholder="Password">
+            <label>Confirm password</label>
+            <input type="password" class="form-control" placeholder="Password confirmation">
+            </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+            </form>
+        </div>
+      </div>
+    </div>
 
-
+    <!-- Add Post -->
+    <div class="modal fade" id="addPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Add Post</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+          <label>Post Title</label>
+          <input type="text" class="form-control" placeholder="Post Title">
+          <div class="form-group">
+          <label>Post Body</label>
+          <textarea name="editor2" class="form-control" placeholder="Page Body"></textarea>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox">Published</label>
+          </div>
+          <div class="form-group">
+          <label>Meta Tags</label>
+          <input type="text" class="form-control" placeholder="Add some tags">
+          </div>
+          <div class="form-group">
+          <label>Meta Description</label>
+          <input type="text" class="form-control" placeholder="Add Meta description">
+          </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -225,7 +291,8 @@
     <script src="http://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <script>
             CKEDITOR.replace( 'editor1' );
-        </script>
+            CKEDITOR.replace( 'editor2' );
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
