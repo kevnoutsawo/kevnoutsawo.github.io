@@ -2769,3 +2769,12 @@ h6 {
   position: relative;
   top: -5px;
 }
+
+.cus_title {
+  margin: 0.6em;
+}
+
+.spot_text {
+  font-size: 1.2em;
+  color: black;
+}
